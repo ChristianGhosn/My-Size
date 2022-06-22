@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Size</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="hand-container">
+            <img src="hand.jpg" alt="hand" usemap="#handmap" height="655px" width="500px">
+            <map name="handmap">
+                <area shape="rect" coords="203,579,377,650" id="wrist" alt="Wrist" value="Wrist">
+                <area shape="poly" coords="166,373,154,376,137,371,127,364,96,325,60,300,24,295,8,313,10,320,42,343,51,366,88,414,104,443,153,500" id="thumb" alt="Thumb" value="Thumb">
+                <area shape="poly" coords="195,272,186,185,188,111,195,70,209,55,224,55,235,65,240,153,250,180,255,260" id="index-finger" alt="Index Finger" value="Index Finger">
+                <area shape="poly" coords="266, 347,265,159,284,32,300,20,310,20,325,30,325,140,328,166,320,250" id="middle-finger" alt="Middle Finger" value="Middle Finger">
+                <area shape="poly" coords="327,425,329,207,350,67,364,56,376,55,391,68,387,178,389,200,374,278," id="ring-finger" alt="Ring Finger" value="Ring Finger">
+                <area shape="poly" coords="382,282,420,140,437,133,452,140,452,193,425,307" id="pinky" alt="Pinky" value="Pinky">
+            </map>
+        </div>
+        <div class="inputs">
+            <div class="output-text">
+                <label for="output">Body Part: </label>
+                <span id="output" value=""></span>
+            </div>
+            <div class="size-selector">
+                <label for="sizes">Size: </label>
+                <select name="sizes" class="sizes">
+                    <option value="0" selected disabled hidden>Select Size</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+                <button>Save</button>
+            </div>
+            <div class="output-storage-table">
+                <table class="output-table">
+                    <tr>
+                        <th class="output-heading">Wrist: </th>
+                        <td id="wrist"></td>
+                    </tr>
+                    <tr>
+                        <th class="output-heading">Thumb: </th>
+                        <td id="thumb"></td>
+                    </tr>
+                    <tr>
+                        <th class="output-heading">Index Finger: </th>
+                        <td id="index-finger"></td>
+                    </tr>
+                    <tr>
+                        <th class="output-heading">Middle Finger: </th>
+                        <td id="middle-finger"></td>
+                    </tr>
+                    <tr>
+                        <th class="output-heading">Ring Finger: </th>
+                        <td id="ring-finger"></td>
+                    </tr>
+                    <tr>
+                        <th class="output-heading">Pinky: </th>
+                        <td id="pinky"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="conversion-chart">
+            <p>Conversion for: <span id="output-converter" value=""></span></p>
+            <table>
+                <tr class="heading-text">
+                    <th>Aus Size</th>
+                    <th>US Size</th>
+                    <th>European Size</th>
+                    <th>Circumference(mm)</th>
+                </tr>
+                <tr class="size-values">
+                    <td id="aus-value"></td>
+                    <td id="us-value"></td>
+                    <td id="europe-value"></td>
+                    <td id="circumference-value"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
